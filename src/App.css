@@ -7,9 +7,28 @@ body {
 }
 
 .text-orange {
-  color: orange;
+  color: rgb(241, 81, 37);
 }
 
 .letter-spacing {
   letter-spacing: 0.5rem;
+}
+
+.header-hero {
+  min-height: 84.15vh;
+  background-image: linear-gradient(
+      rgba(241, 81, 37, 0.3),
+      rgba(241, 81, 37, 0.3)
+    ),
+    url("./images/homeBcg.jpeg");
+
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.header-default {
+  min-height: 84.15vh;
+  background: linear-gradient(rgba(241, 81, 37, 0.3), rgba(241, 81, 37, 0.3)),
+    url("./images/defaultBcg.jpeg") center/cover no-repeat;
 }
