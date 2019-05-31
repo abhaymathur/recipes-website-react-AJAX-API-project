@@ -8,13 +8,13 @@ export default class Search extends Component {
         <div className="row">
           <h2 className="col text-center text-slanted text-capitalize">
             search recipes with
-            <span class="text-orange"> food2fork </span>
+            <span className="text-orange"> food2fork </span>
           </h2>
         </div>
         <div className="row">
-          <h7 className="col text-center text-capitalize mt-3">
+          <h4 className="col text-center text-capitalize mt-3">
             type recipes separated by comma
-          </h7>
+          </h4>
         </div>
         <div className="row">
           <div className="col">
