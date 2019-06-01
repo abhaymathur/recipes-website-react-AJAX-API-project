@@ -17,7 +17,7 @@ export default class SingleRecipe extends Component {
     // const url = `https://www.food2fork.com/api/get?key=${
     //   process.env.REACT_APP_API_KEY
     // }&rId=${this.state.id}`;
-    const url = `https://www.food2fork.com/api/get?key=90437d065844e75f686279e5e0f618fa&rId=${
+    const url = `https://www.food2fork.com/api/get?key=839cebe4fcccea1db3e928ca4a470ee9&rId=${
       this.state.id
     }`;
     try {
