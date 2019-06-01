@@ -16,9 +16,9 @@ export default class Recipes extends Component {
     //   process.env.REACT_APP_API_KEY
     // }`,
     url:
-      "https://www.food2fork.com/api/search?key=c07b37f07fc30158c0cd6e88cbfe3e85",
+      "https://www.food2fork.com/api/search?key=90437d065844e75f686279e5e0f618fa",
     baseurl:
-      "https://www.food2fork.com/api/search?key=c07b37f07fc30158c0cd6e88cbfe3e85",
+      "https://www.food2fork.com/api/search?key=90437d065844e75f686279e5e0f618fa",
     query: "&q=",
     error: ""
   };
