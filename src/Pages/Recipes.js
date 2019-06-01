@@ -16,9 +16,9 @@ export default class Recipes extends Component {
     //   process.env.REACT_APP_API_KEY
     // }`,
     url:
-      "https://www.food2fork.com/api/search?key=90437d065844e75f686279e5e0f618fa",
+      "https://www.food2fork.com/api/search?key=c07b37f07fc30158c0cd6e88cbfe3e85",
     baseurl:
-      "https://www.food2fork.com/api/search?key=90437d065844e75f686279e5e0f618fa",
+      "https://www.food2fork.com/api/search?key=c07b37f07fc30158c0cd6e88cbfe3e85",
     query: "&q=",
     error: ""
   };
@@ -27,9 +27,18 @@ export default class Recipes extends Component {
     try {
       const data = await fetch(this.state.url);
       const jsondata = await data.json();
-      this.setState({
-        recipeData: jsondata.recipes
-      });
+      if (jsondata.recipes.length === 0) {
+        this.setState({
+          recipeData: {},
+
+          error: `Sorry, we do not have any cuisine related to that keyword. Please try something else, or click on the search button to view top 30 recipes.`
+        });
+      } else {
+        this.setState({
+          recipeData: jsondata.recipes,
+          error: ""
+        });
+      }
     } catch (error) {
       console.log(error);
     }
@@ -63,8 +72,15 @@ export default class Recipes extends Component {
           handleChange={this.handleChange}
           handleSubmit={this.handleSubmit}
         />
-
-        <RecipeList recipeData={this.state.recipeData} />
+        {this.state.error ? (
+          <div className="row">
+            <div className="col text-center mx-auto mt-5 text-orange mx-10 font-italic">
+              <h4>{this.state.error}</h4>
+            </div>
+          </div>
+        ) : (
+          <RecipeList recipeData={this.state.recipeData} />
+        )}
       </>
     );
   }
