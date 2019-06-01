@@ -15,10 +15,10 @@ export default class Recipe extends Component {
         <div className="col-10 mx-auto col-md-6 col-lg-4">
           <div className="card" syle={{ height: "100%" }}>
             <img
-              className="img-card-top"
+              className="card-img-top"
               src={image_url}
               style={{ height: "14rem" }}
-              alt="food picture"
+              alt="food"
             />
             <div className="card-body text-capitalize">
               <h6> {title}</h6>
